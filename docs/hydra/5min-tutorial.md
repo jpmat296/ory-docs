@@ -41,7 +41,7 @@ $ docker-compose -f quickstart.yml \
 
 This command makes Docker Compose start up a database server and a basic base
 ORY Hydra server that uses this database. If you need more details on this,
-please examine the `scripts/5-min-tutorial.sh` and `docker-compose*.yml` files.
+please examine the `scripts/5min-tutorial.sh` and `docker-compose*.yml` files.
 
 You may also extend the command above to enable distributed tracing. The tracing
 UI is exposed at [http://127.0.0.1:16686/search](127.0.0.1:16686/search):
@@ -56,7 +56,7 @@ $ docker-compose -f quickstart.yml \
 Hydra provides an endpoint for Prometheus to scrape as a target. You can run the
 following command to start the needed containers, and status of Hydra is exposed
 at targets page in Prometheus
-[http://localhost:9090/tarets](http://localhost:9090/targets):
+[http://localhost:9090/targets](http://localhost:9090/targets):
 
 ```
 docker-compose -f quickstart.yml \
@@ -68,7 +68,7 @@ Let's confirm that everything is working by creating an OAuth 2.0 Client.
 
 Note: The following commands run Hydra inside Docker. If you have the ORY Hydra
 CLI installed locally, you can omit
-`docker-compose -f quickstart.yml exec /hydra` in front of each command.
+`docker-compose -f quickstart.yml exec hydra` in front of each command.
 
 The OAuth 2.0 client uses port `4444` and `4445`. The former is ORY Hydra's
 public endpoint, the latter its administrative endpoint. For more information
